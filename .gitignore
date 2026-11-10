@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+packages/**/node_modules/
+.npm/
+
+# Build outputs
+dist/
+packages/**/dist/
+*.tsbuildinfo
+
+# Cypress
+cypress/screenshots/
+cypress/videos/
+cypress/downloads/
+
+# Coverage
+coverage/
+.nyc_output/
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/settings.json
+.idea/
+*.swp
+
+# Release
+CHANGELOG.md.bak

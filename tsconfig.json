@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  // Root tsconfig — the project-references entry point, so that `tsc --build`
+  // from the root checks every package in dependency order.
+  // Compiler options live in tsconfig.base.json, which each package extends.
+  "files": [],
+  "references": [
+    { "path": "./packages/cache-buster" },
+    { "path": "./packages/vite-plugin-cache-buster" },
+    { "path": "./tsconfig.scripts.json" }
+  ]
+}
