@@ -5,6 +5,10 @@
 A Vite plugin to automatically run cache busting during the build process using
 `@piplup/cache-buster`.
 
+**[Documentation](https://www.piplupjs.com/docs/vite-plugin-cache-buster/installation)**
+·
+[Reload users after a deploy](https://www.piplupjs.com/docs/reload-after-deploy)
+
 ## Installation
 
 You can install the plugin via npm or yarn:
@@ -56,9 +60,16 @@ export default {
 
 ## How It Works
 
-The plugin hooks into Vite's build process and runs the `piplup-cache-buster`
-command from `@piplup/cache-buster` during the build if it's a production build
-(`NODE_ENV=production`) or when debug mode is enabled.
+The plugin runs the `piplup-cache-buster` command from `@piplup/cache-buster` at
+the start of a production build, or of any build when `debug` is `true`, and
+when the dev server starts. The command writes a new release ID to
+`public/RELEASE` (the `publicDir` option changes the folder), which Vite copies
+into the build output. The file changes on every build, so add it to
+`.gitignore`.
+
+See
+[Reload users after a deploy](https://www.piplupjs.com/docs/reload-after-deploy)
+for the rest of the setup.
 
 ## License
 

@@ -3,6 +3,9 @@
 Cache busting for React apps, and the Vite plugin that wires it into a build.
 Both packages release together from this repository on a shared version.
 
+**[Documentation](https://www.piplupjs.com/docs/cache-busting)** ·
+[Reload users after a deploy](https://www.piplupjs.com/docs/reload-after-deploy)
+
 ## [@piplup/cache-buster](./packages/cache-buster/README.md)
 
 React library that checks for updates and reloads the page when a new release is

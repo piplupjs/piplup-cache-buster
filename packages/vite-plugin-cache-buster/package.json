@@ -7,10 +7,14 @@
     "@piplup/cache-buster vite plugin",
     "@piplup/vite-plugin-cache-buster",
     "cache buster plugin",
+    "cache busting",
+    "reload after deploy",
+    "vite",
     "vite cache buster plugin",
+    "vite-plugin",
     "vite-plugin-cache-buster"
   ],
-  "homepage": "https://www.piplupjs.com",
+  "homepage": "https://www.piplupjs.com/docs/vite-plugin-cache-buster/installation",
   "license": "MIT",
   "repository": {
     "url": "git+https://github.com/piplupjs/piplup-cache-buster.git",
