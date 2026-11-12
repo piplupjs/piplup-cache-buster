@@ -6,6 +6,11 @@ Cache buster library (<1kb) for React that helps in busting cache by checking
 changes for a unique release ID and calling window.location.reload when a change
 is detected in release ID.
 
+**[Documentation](https://www.piplupjs.com/docs/cache-buster/installation)** ·
+[Reload users after a deploy](https://www.piplupjs.com/docs/reload-after-deploy)
+·
+[Vite plugin](https://www.piplupjs.com/docs/vite-plugin-cache-buster/installation)
+
 ## Installation
 
 You can install @piplup/cache-buster using:
@@ -131,6 +136,17 @@ release file is at `/app/RELEASE`, not `/RELEASE`. Pass its location with `url`:
   <YourApp />
 </CacheBuster>
 ```
+
+## Documentation
+
+- [Installation](https://www.piplupjs.com/docs/cache-buster/installation)
+- [Reload users after a deploy](https://www.piplupjs.com/docs/reload-after-deploy):
+  caching `index.html`, detecting a new release and recovering from failed chunk
+  loads
+- [`CacheBuster`](https://www.piplupjs.com/docs/cache-buster/components/cache-buster)
+  and
+  [`useReleaseStatus`](https://www.piplupjs.com/docs/cache-buster/hooks/use-release-status)
+- [`@piplup/vite-plugin-cache-buster`](https://www.piplupjs.com/docs/vite-plugin-cache-buster/installation)
 
 ## Contributing
 

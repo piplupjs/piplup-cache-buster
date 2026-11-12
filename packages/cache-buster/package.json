@@ -2,12 +2,19 @@
   "name": "@piplup/cache-buster",
   "version": "3.2.5",
   "private": false,
-  "description": "React library that helps in busting cache",
+  "description": "Reload React apps when a new release is deployed: compares a build-time release ID and reloads stale tabs once.",
   "keywords": [
     "cache buster",
-    "react-cache-buster"
+    "cache busting",
+    "deploy",
+    "new version",
+    "react cache busting",
+    "react-cache-buster",
+    "release",
+    "reload after deploy",
+    "stale cache"
   ],
-  "homepage": "https://www.piplupjs.com",
+  "homepage": "https://www.piplupjs.com/docs/cache-buster/installation",
   "license": "MIT",
   "repository": {
     "url": "git+https://github.com/piplupjs/piplup-cache-buster.git",
