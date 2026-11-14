@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 import { FILENAME } from './constant';
 import { reloadForNewRelease, useReleaseStatus } from './release-status';
 
@@ -29,12 +30,14 @@ function CacheBuster(props: CacheBusterProps): React.ReactElement {
 
   React.useEffect(() => {
     if (!enabled || releaseStatus) {
+      // eslint-disable-next-line react/set-state-in-effect -- stays initialized once the status is known
       setIsInitialized(true);
     }
   }, [releaseStatus, enabled]);
 
   React.useEffect(() => {
     if (releaseStatus === 'new-release' && !reloadForNewRelease(storageKey, verbose)) {
+      // eslint-disable-next-line react/set-state-in-effect -- set after trying to reload the page
       setIsReloadSkipped(true);
     }
   }, [releaseStatus, storageKey, verbose]);
@@ -42,16 +45,16 @@ function CacheBuster(props: CacheBusterProps): React.ReactElement {
   // Keep showing `loading` while the page reloads, so the old release doesn't flash.
   if (!isInitialized || (releaseStatus === 'new-release' && !isReloadSkipped)) {
     // eslint-disable-next-line react/jsx-no-useless-fragment
-    return <>{loading}</>;
+    return <React.Fragment>{loading}</React.Fragment>;
   }
 
   if (releaseStatus === 'error') {
     // eslint-disable-next-line react/jsx-no-useless-fragment
-    return <>{error}</>;
+    return <React.Fragment>{error}</React.Fragment>;
   }
 
   // eslint-disable-next-line react/jsx-no-useless-fragment
-  return <>{children}</>;
+  return <React.Fragment>{children}</React.Fragment>;
 }
 
 export default CacheBuster;

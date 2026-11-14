@@ -1,6 +1,7 @@
 import { execSync } from 'child_process';
 import path from 'path';
-import { type Logger, type Plugin, type PluginOption } from 'vite';
+
+import type { Logger, Plugin, PluginOption } from 'vite';
 
 export type VitePluginCacheBusterOptions = {
   debug?: boolean;

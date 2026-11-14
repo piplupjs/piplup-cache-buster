@@ -66,5 +66,8 @@
     "react": {
       "optional": false
     }
-  }
+  },
+  "browserslist": [
+    "baseline widely available"
+  ]
 }
