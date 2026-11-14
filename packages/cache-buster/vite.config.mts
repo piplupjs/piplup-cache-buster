@@ -1,8 +1,10 @@
 import { readFileSync } from 'node:fs';
 import * as path from 'node:path';
+
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+
 import packageJSON from './package.json' with { type: 'json' };
 
 const license = readFileSync(path.resolve('./LICENSE'), {
@@ -33,7 +35,6 @@ export default defineConfig({
     minify: true,
     outDir: './dist',
     reportCompressedSize: true,
-    sourcemap: false,
     rollupOptions: {
       external,
       output: {
@@ -41,6 +42,7 @@ export default defineConfig({
         sourcemapExcludeSources: true,
       },
     },
+    sourcemap: false,
   },
   plugins: [
     react(),
